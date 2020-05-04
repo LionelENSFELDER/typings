@@ -1,0 +1,24 @@
+{
+  "name": "typings",
+  "version": "1.0.0",
+  "description": "<a href=\"https://typings.gg\" target=\"_blank\">typings.gg</a> is a sleek and modern typing test website. it supports many custom themes",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionelENSFELDER/typings.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LionelENSFELDER/typings/issues"
+  },
+  "homepage": "https://github.com/LionelENSFELDER/typings#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "node": "^14.0.0"
+  }
+}
