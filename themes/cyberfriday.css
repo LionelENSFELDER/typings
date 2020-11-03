@@ -1,0 +1,63 @@
+/*
+teal: #5DCFB8
+red: #D73811
+orange: #E16B06
+yellow: #E1BA45
+brown: #5B3217
+*/
+
+body {
+    background-color: #222222;
+  }
+  #header {
+    color: #ff3471;
+  }
+  
+  #left-wing {
+    color: #ffffff;
+  }
+  
+  #right-wing {
+    color: #ffffff;
+  }
+  
+  #typing-area,
+  #theme-area {
+    background: #585858;
+  }
+  
+  #input-field {
+    background: #ffffff;
+    /* background: #E1BA45; */
+  }
+  
+  #input-field.wrong {
+    background: #ffffff;
+    color: #ff0000;
+  }
+  
+  #redo-button {
+    background: #0000008c;
+    color: #ffffff;
+  }
+  
+  #text-display {
+    color: #9b9b9b;
+  }
+  
+  #footer {
+    color: #ffffff;
+  }
+  
+  .highlight {
+    color: #fffb27;
+  }
+  
+  .correct {
+    color: #ff3471;
+  }
+  
+  .wrong {
+    color: #9b9b9b;
+  }
+  

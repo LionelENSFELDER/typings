@@ -18,29 +18,60 @@ let timerActive = false;
 let punctuation = false;
 
 // Get cookies
-getCookie('theme') === '' ? setTheme('dark') : setTheme(getCookie('theme'));
-getCookie('language') === '' ? setLanguage('works') : setLanguage(getCookie('language'));
+getCookie('theme') === '' ? setTheme('cyberfriday') : setTheme(getCookie('theme'));
+getCookie('language') === '' ? setLanguage('regular') : setLanguage(getCookie('language'));
 getCookie('wordCount') === '' ? setWordCount(50) : setWordCount(getCookie('wordCount'));
 getCookie('timeCount') === '' ? setTimeCount(60) : setTimeCount(getCookie('timeCount'));
 getCookie('typingMode') === '' ? setTypingMode('wordcount') : setTypingMode(getCookie('typingMode'));
 getCookie('punctuation') === '' ? setPunctuation('false') : setPunctuation(getCookie('punctuation'));
 
 //Display available options
-const availableLang = async function () {
-	const langList = [];
+// const availableLang = async function () {
+// 	const langList = [];
+// 	let url = 'texts/random.json';
+// 	let response = await fetch(url);
+// 	if (response.ok) {
+// 		let data = await response.json();
+// 		langList.push(Object.keys(data));
+// 		let options = document.getElementById('options');
+// 		let text = document.createTextNode("Avalaible options: " + langList.join(","));
+// 		options.appendChild(text);
+// 	} else {
+// 		console.log('data fails');
+// 	}
+// };
+// availableLang();
+
+
+//Display available custom options
+const availableCustomOptions = async function () {
+	const optionsList = [];
 	let url = 'texts/random.json';
 	let response = await fetch(url);
 	if (response.ok) {
 		let data = await response.json();
-		langList.push(Object.keys(data));
-		let options = document.getElementById('options');
-		let text = document.createTextNode("Avalaible options: " + langList.join(",") + " ATL + L");
-		options.appendChild(text);
+		optionsList.push(Object.keys(data));
+		let input = document.getElementById('custom-options');
+		optionsList[0].map((item)=>{
+			let option = document.createElement("option");
+			option.value = item;
+			option.text = item;
+			if(item === "trend"){
+				option.selected = "selected";
+			}
+			input.appendChild(option);
+		})
 	} else {
 		console.log('data fails');
 	}
 };
-availableLang();
+availableCustomOptions();
+
+function setCustomOption(){
+	let value = document.getElementById("custom-options").value;
+	setLanguage(value);
+}
+
 
 // Find a list of words and display it to textDisplay
 function setText() {

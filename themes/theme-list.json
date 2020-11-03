@@ -1,4 +1,8 @@
 {
+    "cyberfriday":{
+        "background":"#585858",
+        "color":"#ff3471"
+    },
     "8008":{
         "background":"#3c4756",
         "color":"#f44c7f"
